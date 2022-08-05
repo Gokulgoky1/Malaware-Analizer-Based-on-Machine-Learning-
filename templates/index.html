@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#"></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#"></a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons"></i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Malware Analyzer(Static Analysis Features)</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict Your file is malware or benign
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>Size_of_Data</b></label>
+            <br>
+          <input placeholder="Size_of_Data in KB" name="Size_of_Data" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>Virtual_Address </b></label>
+            <br>
+          <input id="last_name" name="Virtual_Addres" placeholder="Virtual_Address"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>Entropy</b></label>
+            <br>
+          <input id="_name" name="Entropy" placeholder="Entropy(0-8)" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>Virtual_Size </b></label>
+            <br>
+          <input id="last_name" name="Virtual_Size" placeholder="Virtual_Size in KB"  type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Scan</button>
+      </div>
+
+    </form>
+      </div>
+    <div class="row center">
+      <br>
+      <h1>
+        {{pred}}
+      </h1>
+    </div>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
